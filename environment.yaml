@@ -1,0 +1,40 @@
+name: crawler
+channels:
+  - conda-forge
+  - microsoft
+  - defaults
+dependencies:
+  - ca-certificates=2022.3.29=hca03da5_0
+  - certifi=2021.10.8=py39hca03da5_2
+  - libcxx=12.0.0=hf6beb65_1
+  - libffi=3.4.2=hc377ac9_2
+  - ncurses=6.3=h1a28f6b_2
+  - openssl=1.1.1n=h1a28f6b_0
+  - pip=21.2.4=py39hca03da5_0
+  - python=3.9.12=hbdb9e5c_0
+  - readline=8.1.2=h1a28f6b_1
+  - setuptools=58.0.4=py39hca03da5_1
+  - sqlite=3.38.2=h1058600_0
+  - tk=8.6.11=hb8d0fd4_0
+  - tzdata=2022a=hda174b7_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.5=h1a28f6b_0
+  - zlib=1.2.11=h5a0b063_4
+  - pip:
+    - autopep8==1.6.0
+    - greenlet==1.1.2
+    - interval==1.0.0
+    - numpy==1.22.3
+    - pandas==1.4.2
+    - playwright==1.20.1
+    - protobuf==3.20.0
+    - pycodestyle==2.8.0
+    - pyee==8.1.0
+    - pymysql==1.0.2
+    - python-dateutil==2.8.2
+    - pytz==2022.1
+    - pyyaml==6.0
+    - six==1.16.0
+    - sqlalchemy==1.4.35
+    - toml==0.10.2
+    - websockets==10.1
