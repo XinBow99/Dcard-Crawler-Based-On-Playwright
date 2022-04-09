@@ -23,8 +23,12 @@ The following tools were used in this project:
 - [Playwright](https://playwright.dev/python/docs/intro#installation)
 - [Python](https://www.python.org)
 - [Mysql](https://hub.docker.com/_/mysql)
+- [ORM](https://docs.sqlalchemy.org/en/14/orm/)
 - [Docker](https://www.docker.com)
 ## :checkered_flag: Starting ##
+Make sure you have an mysql database! modify the `config/mysql_example.yaml` file and replace to `mysql.yaml`.
+You can follow the `utils/dcard_orm.py` to create the database. or modify the `utils/mysql_connect_handle.py` file to change the saveing method, like `csv`, `sqlite`, etc.
+
 
 ```bash
 # Clone this project
