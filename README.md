@@ -2,7 +2,7 @@
   <img width="30%" src="/images/spider-robot.png" alt="crawler" />
 </div>
 
-<h1 align="center">Dcard Crawler Using Wright</h1>
+<h1 align="center">Dcard Crawler Using PlayWright</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/Xinbow99/dcard_crawler_based_on_playwright">
