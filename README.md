@@ -5,13 +5,13 @@
 <h1 align="center">Dcard Crawler Using Wright</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Xinbow99/dcard_crawler_based_on_playwright?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Xinbow99/dcard_crawler_based_on_playwright">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Xinbow99/dcard_crawler_based_on_playwright?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Xinbow99/dcard_crawler_based_on_playwright">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Xinbow99/dcard_crawler_based_on_playwright?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Xinbow99/dcard_crawler_based_on_playwright">
 
-  <img alt="License" src="https://img.shields.io/github/license/Xinbow99/dcard_crawler_based_on_playwright?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/Xinbow99/dcard_crawler_based_on_playwright">
 </p>
 
 <br>
