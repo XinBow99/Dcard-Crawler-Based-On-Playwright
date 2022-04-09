@@ -2,3 +2,4 @@ config/mysql.yaml
 dcard_auth.json
 __pycache__/
 *.py[cod]
+.DS_Store
