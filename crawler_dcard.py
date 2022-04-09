@@ -81,7 +81,6 @@ class dcardPosts:
             f'https://www.dcard.tw/f/{self.parserOptions.forum}?latest={self.parserOptions.latest}')
         self.parserFirstContent()
         public_functions.loadNextPage(self.page, self)
-        input()
         context.close()
         browser.close()
 
