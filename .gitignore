@@ -1,2 +1,3 @@
 config/mysql.yaml
 dcard_auth.json
+*__pycache__
