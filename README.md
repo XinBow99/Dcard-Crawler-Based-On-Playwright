@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img width="30%" src="https://raw.githubusercontent.com/XinBow99/dcard_crawler_based_on_playwright/main/images/spider-robot.png" alt="crawler" />
+  <img width="30%" src="/images/spider-robot.png" alt="crawler" />
 </div>
 
 <h1 align="center">Dcard Crawler Using Wright</h1>
@@ -52,7 +52,7 @@ $ bash script/update_comment.sh
 $ python crawler_dcard.py -f relationship -l false -L 100
 ```
 Figure 1: The output of the command above.
-<img width="30%" src="https://raw.githubusercontent.com/XinBow99/dcard_crawler_based_on_playwright/main/images/figure1.png" alt="f1" />
+<img width="30%" src="/images/figure1.png" alt="f1" />
 
 ### The following parameters are available:
 * To get post information, you can use the following command:
@@ -67,8 +67,8 @@ Figure 1: The output of the command above.
 python update_dcard_comment.py -L -1 -e "your_dcard_login_email" -p "your_dcard_login_password" -L "limit_of_crawl_comments"
 ```
 Figure 2 and 3: The output of the command above.
-<img width="30%" src="https://raw.githubusercontent.com/XinBow99/dcard_crawler_based_on_playwright/main/images/figure2.png" alt="f2" />
-<img width="30%" src="https://raw.githubusercontent.com/XinBow99/dcard_crawler_based_on_playwright/main/images/figure3.png" alt="f3" />
+<img width="30%" src="/images/figure2.png" alt="f2" />
+<img width="30%" src="/images/figure3.png" alt="f3" />
 ### The following parameters are available:
 * To get post information, you can use the following command:
   * `python update_dcard_comment.py -L -1 -e "your_dcard_login_email" -p "your_dcard_login_password" -L "limit_of_crawl_comments"`
