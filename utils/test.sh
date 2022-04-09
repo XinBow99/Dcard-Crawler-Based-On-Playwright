@@ -1,0 +1,1 @@
+playwright codegen https://www.dcard.tw/f?listKey=latest_TW&listType=globalPaging&noWidget=true

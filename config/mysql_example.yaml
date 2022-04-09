@@ -1,0 +1,6 @@
+dcard_crawler:
+  host: your_mysql_host
+  port: your_mysql_port
+  user: your_mysql_login_user
+  password: your_mysql_login_password
+  charset: utf8mb4
