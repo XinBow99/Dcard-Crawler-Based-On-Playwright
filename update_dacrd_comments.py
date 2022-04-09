@@ -210,7 +210,7 @@ class dcardPostInformation:
 
 if __name__ == "__main__":
     # To bypass the captcha, we need to get the auth state
-    #dcardAuthGenerateWithMobile()
+    dcardAuthGenerateWithMobile()
     # Finally we can get the content, and comments of the post
     dcardPostInformation()
     # Congratulations! You have finished the task!
