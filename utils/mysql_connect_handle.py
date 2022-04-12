@@ -90,7 +90,8 @@ class labDBconnect:
                     exists = session.query(dcard_orm.Comments.comment_key).filter_by(
                         comment_key=comment['comment_key']).first() is not None
                     if not exists:
-                        print('[write|{}]{}'.format(
+                        print('[write|{}|{}]{}'.format(
+                            cls.parserOptions.spilt_process,
                             cls.postCount,
                             comment['content']))
                         session.add(
@@ -108,7 +109,8 @@ class labDBconnect:
                         session.close()
                         cls.postCount += 1
                     else:
-                        print('[info|{}] {} comment already exists.'.format(
+                        print('[info|{}|{}] {} comment already exists.'.format(
+                            cls.parserOptions.spilt_process,
                             cls.postCount,
                             comment['comment_key']))
                         session.close()

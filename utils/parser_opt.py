@@ -27,6 +27,8 @@ def commentParserOpt():
                       help="為了產生爬蟲所需auth，故需登入dcard", type=str)
     parser.add_option("-e", "--dcard-email", dest="email",
                       help="為了產生爬蟲所需auth，故需登入dcard", type=str)
+    parser.add_option("-s", "--spilt-process", dest="spilt_process",
+                      help="測試用", type=int)
     (options, args) = parser.parse_args()
     required = ['password', 'email']
     for r in required:

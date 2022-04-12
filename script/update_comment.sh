@@ -1,1 +1,1 @@
-python update_dacrd_comments.py -L -1 -e "your_dcard_login_email" -p "your_dcard_login_password"
+python update_dacrd_comments.py -L -1 -e "your_dcard_ac" -p "your_dcard_pw"
