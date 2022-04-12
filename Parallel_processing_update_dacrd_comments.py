@@ -1,8 +1,8 @@
 from playwright.sync_api import Playwright, sync_playwright, expect
-from datetime import datetime
 import re
 import pandas
 from utils import mysql_connect_handle, parser_opt, public_functions
+import threading
 
 
 class dcardAuthGenerateWithMobile:
@@ -32,7 +32,8 @@ class dcardAuthGenerateWithMobile:
         print('[info] click email input.')
 
         # Fill [placeholder="輸入信箱"]
-        page.locator("[placeholder=\"輸入信箱\"]").fill("{}".format(self.parserOptions.email))
+        page.locator("[placeholder=\"輸入信箱\"]").fill(
+            "{}".format(self.parserOptions.email))
         print('[info] fill email input.')
 
         # Click [placeholder="輸入密碼"]
@@ -40,7 +41,8 @@ class dcardAuthGenerateWithMobile:
         print('[info] click password input.')
 
         # Fill [placeholder="輸入密碼"]
-        page.locator("[placeholder=\"輸入密碼\"]").fill("{}".format(self.parserOptions.password))
+        page.locator("[placeholder=\"輸入密碼\"]").fill(
+            "{}".format(self.parserOptions.password))
         print('[info] fill password input.')
 
         # Click button:has-text("註冊 / 登入")
@@ -90,16 +92,34 @@ class dcardPostInformation:
         self.postCount = 0
         self.stopCrawler = False
         # To get all post information from dcardCrawlerDBHandler
-        for postId in self.dcardCrawlerDBHandler.getDcardPosts():
+        _threads = []
+        _postsTemp = self.fund(self.dcardCrawlerDBHandler.getAllPost(), 5)
+        for posts in _postsTemp:
+            _threads.append(threading.Thread(
+                target=self.getPostInformation, args=(posts,)))
+        for thread in _threads:
+            thread.start()
+        for thread in _threads:
+            thread.join()
+
+        # __next > main > div > div > article > div.sc-1eorkjw-5.hKBtVr > div > div
+
+    def fund(self, listTemp, n):
+        resules = []
+        for i in range(0, len(listTemp), n):
+            temp = listTemp[i:i + n]
+            resules.append(temp)
+        return resules
+
+    def parallel_processing(self,  postIds):
+        for postId in postIds:
             try:
                 with sync_playwright() as playwright:
                     # 'postCount' must be initialized to 0 before 'self.run()'
                     # The 'postCount' is used to count the number of comments that have been crawled
-                    self.postCount = 0
                     self.run(playwright, postId.href)
             except:
                 pass
-        # __next > main > div > div > article > div.sc-1eorkjw-5.hKBtVr > div > div
 
     def handleResponse(self, response):
         if '/comments?' in response.url and response.status == 200:
