@@ -96,7 +96,7 @@ class dcardPostInformation:
         _postsTemp = self.fund(self.dcardCrawlerDBHandler.getDcardPosts(), 5)
         for posts in _postsTemp:
             _threads.append(threading.Thread(
-                target=self.getPostInformation, args=(posts,)))
+                target=self.parallel_processing, args=(posts,)))
         for thread in _threads:
             thread.start()
         for thread in _threads:
