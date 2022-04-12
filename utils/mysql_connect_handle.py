@@ -39,7 +39,7 @@ class labDBconnect:
         print('[GetDcardPosts]start to run')
         with self.dbConnectEngine.connect() as connection:
             with self.dbSession(bind=connection) as session:
-                _dcardPosts = session.query(dcard_orm.Posts.href).all()
+                _dcardPosts = session.query(dcard_orm.Posts.href).order_by(dcard_orm.Posts.id.desc()).all()
                 session.close()
         return _dcardPosts
 
