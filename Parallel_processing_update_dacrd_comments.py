@@ -91,16 +91,17 @@ class dcardPostInformation:
         self.postCount = 0
         self.stopCrawler = False
         # To get all post information from dcardCrawlerDBHandler
-        _postsTemp = self.fund(self.dcardCrawlerDBHandler.getDcardPosts(), 3)[self.parserOptions.spilt_process]
+        _postsTemp = self.fund(self.dcardCrawlerDBHandler.getDcardPosts())[self.parserOptions.spilt_process]
         self.parallel_processing(_postsTemp)
 
         # __next > main > div > div > article > div.sc-1eorkjw-5.hKBtVr > div > div
 
-    def fund(self, listTemp, n):
-        resules = []
-        for i in range(0, len(listTemp), n):
-            temp = listTemp[i:i + n]
-            resules.append(temp)
+    def fund(self, listTemp):
+        resules = [
+            listTemp[:len(listTemp)//3],
+            listTemp[len(listTemp)//3:len(listTemp)//3*2],
+            listTemp[len(listTemp)//3*2:]
+        ]
         return resules
 
     def parallel_processing(self,  postIds):
@@ -222,7 +223,7 @@ class dcardPostInformation:
 
 if __name__ == "__main__":
     # To bypass the captcha, we need to get the auth state
-    dcardAuthGenerateWithMobile()
+    #dcardAuthGenerateWithMobile()
     # Finally we can get the content, and comments of the post
     dcardPostInformation()
     # Congratulations! You have finished the task!
