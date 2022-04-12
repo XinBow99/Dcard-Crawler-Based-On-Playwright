@@ -1,1 +1,1 @@
-python Parallel_processing_update_dacrd_comments -L -1 -e "your_dcard_login_email" -p "your_dcard_login_password"
+python Parallel_processing_update_dacrd_comments.py -L -1 -e "your_dcard_login_email" -p "your_dcard_login_password"
