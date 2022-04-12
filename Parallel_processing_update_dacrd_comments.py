@@ -93,7 +93,7 @@ class dcardPostInformation:
         self.stopCrawler = False
         # To get all post information from dcardCrawlerDBHandler
         _threads = []
-        _postsTemp = self.fund(self.dcardCrawlerDBHandler.getDcardPosts(), 5)
+        _postsTemp = self.fund(self.dcardCrawlerDBHandler.getDcardPosts(), 2)
         for posts in _postsTemp:
             _threads.append(threading.Thread(
                 target=self.parallel_processing, args=(posts,)))
